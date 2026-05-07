@@ -1,0 +1,70 @@
+Notebook[{Cell[
+"\<\>","Text",ExpressionUUID -> "3985b420-0049-481d-9057-87726abbaa0e"],Cell[
+BoxData[
+""],"Input",ExpressionUUID -> "94c0d687-8887-4d6e-bd98-e38d84a49867"],Cell[
+BoxData[
+{StyleBox[RowBox[{RowBox[{"(*",RowBox[{"Bright"," ","tank"}]," ","*)"}],"\n","\n",RowBox[
+{"BrightTankTotalMBalance","=","BTMBal"}]}]],"\n",RowBox[{RowBox[{"BTMBal","=",RowBox[
+{RowBox[{"m12","+","m13","-","m14"}],"==","0"}]}],";"}],RowBox[{"\n","\n"}],RowBox[
+{"BrightTankSolBalance","=","BTSolBal"}],"\n",RowBox[{RowBox[{"BTSolBal","=",RowBox[
+{RowBox[{RowBox[{"m12","*","x6"}],"-",RowBox[{"m14","*","x10"}]}],"==","0"}]}],";"}],RowBox[
+{"\n","\n"}],RowBox[{"BrightTankAABalance","=","BTAABal"}],"\n",RowBox[{RowBox[{"BTAABal","=",RowBox[
+{RowBox[{RowBox[{"m12","*","x7"}],"-",RowBox[{"m14","*","x11"}]}],"==","0"}]}],";"}],RowBox[
+{"\n","\n"}],RowBox[{"BrightTankEtBalance","=","BTEBal"}],"\n",RowBox[{RowBox[{"BTEBal","=",RowBox[
+{RowBox[{RowBox[{"m12","*","x8"}],"-",RowBox[{"m14","*","x12"}]}],"==","0"}]}],";"}],RowBox[
+{"\n","\n"}],RowBox[{"BrightTankDBalance","=","BTDBal"}],"\n",RowBox[{RowBox[{"BTDBal","=",RowBox[
+{RowBox[{RowBox[{"m12","*","x9"}],"-",RowBox[{"m14","*","x13"}]}],"==","0"}]}],";"}],RowBox[
+{"\n","\n"}],RowBox[{"BrightTankWaterBalance","=","BTWBal"}],"\n",RowBox[{RowBox[
+{"BTWBal","=",RowBox[{RowBox[{RowBox[{"m12","*",RowBox[{"(",RowBox[{"1","-","x6","-","x7","-","x8","-","x9"}],")"}]}],"-",RowBox[
+{"m14","*",RowBox[{"(",RowBox[{"1","-","x10","-","x11","-","x12","-","x13","-","x14"}],")"}]}]}],"==","0"}]}],";"}],RowBox[
+{"\n","\n"}],StyleBox[RowBox[{RowBox[{"(*",RowBox[{"CO2Pressure","=","PCO2"}],"*)"}]," ",RowBox[
+{"(*",RowBox[{"this"," ","is"," ","from"," ",RowBox[{"Henry","'"}],"s"," ","Law"}],"*)"}],"\n",RowBox[
+{RowBox[{"PCO2","=="," ",RowBox[{"x14","*","0.00228"}]}],";"}]}]],RowBox[{"\n","\n"}],StyleBox[
+RowBox[{RowBox[{"(*",RowBox[{"CO2Volume","=","VCO2"}],"*)"}],"\n",RowBox[{RowBox[
+{"VCO2","==",RowBox[{"5","*","117"}]}],";"}]," ",RowBox[{"(*",RowBox[{"units"," ","in"," ","liters"}],"*)"}]}]],RowBox[
+{"\n","\n"}],StyleBox[RowBox[{RowBox[{"(*",RowBox[{"CO2VolumeProcessSpec",",",RowBox[
+{"solves"," ","for"," ","CO2"," ","Mass"}]}],"*)"}],"\n",RowBox[{RowBox[{"m13","==",RowBox[
+{RowBox[{"(",RowBox[{RowBox[{"(",RowBox[{"PCO2","*","VCO2"}],")"}],"/",RowBox[{"(",RowBox[
+{".08206","*","311"}],")"}]}],")"}],"*",".044"}]}],";"}]}]],RowBox[{"\n","\n","\n"}],RowBox[
+{RowBox[{"BrightTankSolution","=",RowBox[{"Solve","[",RowBox[{RowBox[{"{",RowBox[
+{"BTMBal",",","BTSolBal",",","BTAABal",",","BTEBal",",","BTDBal",",","BTWBal"}],"}"}],",",RowBox[
+{"{",RowBox[{"x6",",","x7",",","x8",",","x9",",","x10",",","x11",",","x12",",","x13",",","x14",",","m12",",","m13",",","m14"}],"}"}]}],"]"}]}],";"}],RowBox[
+{"\n","\n","\n","\n","\n"}],RowBox[{"\[NonBreakingSpace]","\n",RowBox[{"(*",RowBox[
+{"TOTAL"," ","MASS"," ","BALANCE"}],"*)"}],"\n","\n",RowBox[{"TotalMassBalance","=","TolMBal"}]}],"\n",RowBox[
+{RowBox[{"TolMBal","=",RowBox[{RowBox[{"m1","+","m2","+","m5","+","m13","-",RowBox[
+{"(",RowBox[{"m3","+","m6","+","m7","+","m8","+","m11","+","m14"}],")"}]}],"==","0"}]}],";"}],RowBox[
+{"\n","\n"}],RowBox[{"TotalWaterBalance","=","TolWBal"}],"\n",RowBox[{RowBox[{"TolWBal","="," ",RowBox[
+{RowBox[{"m1","+",RowBox[{"(",RowBox[{"e2","*","6"}],")"}],"-",RowBox[{"(",RowBox[
+{RowBox[{"m3","*",RowBox[{"(",RowBox[{"1","-","x2"}],")"}]}],"+",RowBox[{"m6","*",RowBox[
+{"(",RowBox[{"1","-","x4","-","x5"}],")"}]}],"+","m8","+",RowBox[{"m14","*",RowBox[
+{"(",RowBox[{"1","-","x10","-","x11","-","x12","-","x13","-","x14"}],")"}]}]}],")"}]}],"==","0"}]}],";"}],RowBox[
+{"\n","\n"}],RowBox[{"TotalIGBalance","=","TolIGBal"}],"\n",RowBox[{RowBox[{"TolIGBal","=",RowBox[
+{RowBox[{RowBox[{"m2","*","x1"}],"-",RowBox[{"m3","*","x2"}]}],"==","0"}]}],";"}],RowBox[
+{"\n","\n"}],RowBox[{"TotalSolBalance","=","TolSolBal"}],"\n",RowBox[{RowBox[{"TolSolBal","=",RowBox[
+{RowBox[{RowBox[{"m2","*",RowBox[{"(",RowBox[{"1","-","x1"}],")"}]}],"-",RowBox[{"(",RowBox[
+{RowBox[{"m6","*","x4"}],"+",RowBox[{"m14","*","x10"}]}],")"}]}],"==","0"}]}],";"}],RowBox[
+{"\n","\n"}],RowBox[{"TotalIHBalance","=","TolIHBal"}],"\n",RowBox[{RowBox[{"TolIHBal","=",RowBox[
+{RowBox[{RowBox[{"m5","*","0.98"}],"-","m7"}],"==","0"}]}],";"}],RowBox[{"\n","\n"}],RowBox[
+{"TotalAABalance","=","TolAABal"}],"\n",RowBox[{RowBox[{"TolAABal","=",RowBox[{RowBox[
+{RowBox[{"m5","*","0.02"}],"-",RowBox[{"(",RowBox[{RowBox[{"m6","*","x5"}],"+",RowBox[
+{"m14","*","x11"}]}],")"}]}],"==","0"}]}],";"}],RowBox[{"\n","\n"}],RowBox[{"TotalCO2Balance1","=","TolCO2Bal"}],"\n",RowBox[
+{RowBox[{"TolCO2Bal","=",RowBox[{RowBox[{RowBox[{RowBox[{"("," ",RowBox[{RowBox[{"(",RowBox[
+{"2","*","e1"}],")"}],"+",RowBox[{"(",RowBox[{"2","*","e2"}],")"}]}],")"}],"*","0.044"}],"-","m11","+","m13","-",RowBox[
+{"m14","*","x14"}]}],"==","0"}]}],";"}],RowBox[{"\n","\n"}],RowBox[{"TotalEtBalance","=","TolEtBal"}],"\n",RowBox[
+{RowBox[{"TolEtBal","=",RowBox[{RowBox[{RowBox[{RowBox[{"("," ",RowBox[{"2","*","e1"}],")"}],"*","0.046"}],"-",RowBox[
+{"m14","*","x12"}]}],"==","0"}]}],";"}],RowBox[{"\n","\n"}],RowBox[{"TotalDBalance","=","TolDBal"}],"\n",RowBox[
+{RowBox[{"TolDBal","="," ",RowBox[{RowBox[{RowBox[{RowBox[{"(",RowBox[{"4","*","e2"}],")"}],"*","0.086"}],"-",RowBox[
+{"m14","*","x13"}]}],"==","0"}]}],";"}],RowBox[{"\n","\n"}],StyleBox[RowBox[{RowBox[
+{"(*",RowBox[{"Total"," ","Process"," ","Specifications"}],"*)"}],"\n","\n",RowBox[
+{"MassRatioWatertoGrain","=","PSRatio"}]}]],"\n",RowBox[{RowBox[{"PSRatio","="," ",RowBox[
+{RowBox[{RowBox[{"3","*","m1"}],"-","m2"}],"==","0"}]}],";"}],RowBox[{"\n","\n"}],RowBox[
+{"WaterRetention","=","PSWaterR"}],"\n",RowBox[{RowBox[{"PSWaterR","=",RowBox[{RowBox[
+{RowBox[{"m3","*",RowBox[{"(",RowBox[{"1","-","x2"}],")"}]}],"-",RowBox[{"m1","*","0.20"}]}],"==","0"}]}],";"}],RowBox[
+{"\n","\n","\n","\n"}],RowBox[{RowBox[{"Totalsolution","=",RowBox[{"Solve","[",RowBox[
+{RowBox[{"{",RowBox[{"TolMBal",",","TolIGBal",",","TolSolBal",",","TolIHBal",",","TolAABal",",","TolCO2Bal",",","TolEtBal",",","TolDBal",",","PSRatio",",","PSWaterR"}],"}"}],",",RowBox[
+{"{",RowBox[{"m1",",","m2",",","m3",","," ","m5",",","m6",",","m7",",","m8",",","m11",",","m13",",","m14",",","e1",",","e2",",","x1",",","x2",",","x4",",","x5",",","x10",",","x11",",","x12",",","x13",",","x14"}],"}"}]}],"]"}]}],";"}],"\n",StyleBox[
+RowBox[{RowBox[{"(*",RowBox[{"Total"," ","Energy"," ","Balance"}],"*)"}],"\n","\n"}]]}],
+"Input",CellLabel -> "In[523]:= ",ExpressionUUID -> "6c7fde8e-efec-4025-85cf-569b71080b37"],Cell[
+
+"\<\>","Text",ExpressionUUID -> "9ab45e14-7d9d-410f-b59b-16562668a2e6"]},StyleDefinitions -> "Default.nb",
+FrontEndVersion -> "14.3 for Wolfram Cloud 1.75 (April 10, 2026)"]
