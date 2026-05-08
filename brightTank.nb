@@ -1,0 +1,33 @@
+Notebook[{Cell[
+BoxData[{RowBox[{RowBox[{"Clear","[","\"Global`*\"","]"}]," "}],"\n",RowBox[
+{RowBox[{"m12","=","3557.1"}],";"}],"\n",RowBox[{RowBox[{"x6","=","0.0123098"}],";"}],"\n",RowBox[
+{RowBox[{"x7","=","0.0000197937"}],";"}],"\n",RowBox[{RowBox[{"x8","=","0.0356741"}],";"}],"\n",RowBox[
+{RowBox[{"x9","=",".00000174257"}],";"}],RowBox[{"\n","\n"}],RowBox[{RowBox[{"eqn1","=",RowBox[
+{RowBox[{"x6","*","m12"}],"==",RowBox[{"x10","*","m14"}]}]}],";"}],"\n",RowBox[{RowBox[
+{"eqn2","=",RowBox[{RowBox[{"x7","*","m12"}],"==",RowBox[{"x11","*","m14"}]}]}],";"}],"\n",RowBox[
+{RowBox[{"eqn3","=",RowBox[{RowBox[{"x8","*","m12"}],"==",RowBox[{"x12","*","m14"}]}]}],";"}],"\n",RowBox[
+{RowBox[{"eqn4","=",RowBox[{RowBox[{"x9","*","m12"}],"==",RowBox[{"x13","*","m14"}]}]}],";"}],"\n",RowBox[
+{RowBox[{"eqn5","=",RowBox[{"m13","==",RowBox[{"x14","*","m14"}]}]}],";"}],"\n",RowBox[
+{RowBox[{"eqn6","=",RowBox[{RowBox[{RowBox[{"(",RowBox[{"1","-","x6","-","x7","-","x8","-","x9"}],")"}],"*","m12"}],"==",RowBox[
+{RowBox[{"(",RowBox[{"1","-","x10","-","x11","-","x12","-","x13","-","x14"}],")"}],"*","m14"}]}]}],";"}],RowBox[
+{"\n","\n"}],RowBox[{RowBox[{"nCO2","=",RowBox[{RowBox[{"(",RowBox[{"30","*","117","*","2"}],")"}],"/","22.4"}]}],";"}],"\n",RowBox[
+{RowBox[{"eqn7","=",RowBox[{RowBox[{"nCO2","*",".04401"}],"==",RowBox[{"x14","*","m14"}]}]}],";"}],"\n",RowBox[
+{RowBox[{"eqn8","=",RowBox[{RowBox[{"x14","*","2164"}],"==","p"}]}],";"}],"\n",RowBox[
+{RowBox[{"eqn9","=",RowBox[{RowBox[{"m13","/",".04401"}],"==",RowBox[{RowBox[{"(",RowBox[
+{"p","*",RowBox[{"(",RowBox[{"5","*","117"}],")"}]}],")"}],"/",RowBox[{"(",RowBox[
+{".08206","*",RowBox[{"(",RowBox[{"273","+","38"}],")"}]}],")"}]}]}]}],";"}],RowBox[
+{"\n","\n"}],RowBox[{RowBox[{"brightTankSolution","=",RowBox[{"Solve","[",RowBox[
+{RowBox[{"{",RowBox[{"eqn1",",","eqn2",",","eqn3",",","eqn4",",","eqn5",",","eqn6",",","eqn7",",","eqn8"}],"}"}],",",RowBox[
+{"{",RowBox[{"x10",",","x11",",","x12",",","x13",",","x14",",","m13",",","m14",",","p"}],"}"}]}],"]"}]}],"\n","\n"}]}],
+"Input",CellLabel -> "In[258]:= ",ExpressionUUID -> "fa7b9c52-fce2-4c19-8108-2622e497c59c"],Cell[
+BoxData[
+TemplateBox[{"Solve","ratnz","\"Solve was unable to solve the system with inexact coefficients. The answer was obtained by solving a corresponding exact system and numericizing the result.\"",2,274,18,26823767835612316009,"Local"},
+"MessageTemplate",BaseStyle -> "MSG"],StandardForm],"MSG","Message",ExpressionUUID -> "b43ef3b3-c02a-4ea4-b7c1-f525c951668b"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"{",RowBox[{RowBox[{"x10","\[Rule]","0.012262253922614498`"}],",",RowBox[
+{"x11","\[Rule]","0.00001971724767811456`"}],",",RowBox[{"x12","\[Rule]","0.0355363103105446`"}],",",RowBox[
+{"x13","\[Rule]","1.7358393977099829`*^-6"}],",",RowBox[{"x14","\[Rule]","0.0038624573417522876`"}],",",RowBox[
+{"m13","\[Rule]","13.792419642857142`"}],",",RowBox[{"m14","\[Rule]","3570.8924196428566`"}],",",RowBox[
+{"p","\[Rule]","8.358357687551951`"}]}],"}"}],"}"}],StandardForm],"Output",CellLabel -> "Out[274]= ",
+ExpressionUUID -> "353bb822-2187-46a9-92b5-ebdec49ba9ce"]},StyleDefinitions -> "Default.nb",
+FrontEndVersion -> "14.3 for Wolfram Cloud 1.75 (April 10, 2026)"]
